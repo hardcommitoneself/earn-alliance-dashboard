@@ -7,7 +7,9 @@ import {
   createHttpLink,
 } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
+import { ThemeProvider } from "styled-components";
 import GlobalStyle from "common/style/global-style";
+import { theme } from "common/style/theme";
 
 import App from "components/App";
 
@@ -32,9 +34,11 @@ const client = new ApolloClient({
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <StrictMode>
-    <GlobalStyle />
-    <ApolloProvider client={client}>
-      <App />
-    </ApolloProvider>
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
+      <ApolloProvider client={client}>
+        <App />
+      </ApolloProvider>
+    </ThemeProvider>
   </StrictMode>
 );
