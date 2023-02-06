@@ -1,4 +1,4 @@
-import React from "react";
+import { StrictMode } from "react";
 import ReactDOM from "react-dom/client";
 import {
   ApolloClient,
@@ -7,7 +7,9 @@ import {
   createHttpLink,
 } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
-import "./index.css";
+import GlobalStyle from "common/style/global-style";
+
+import App from "components/App";
 
 const httpLink = createHttpLink({
   uri: process.env.REACT_APP_APOLLO_CLIENT_URL,
@@ -29,7 +31,10 @@ const client = new ApolloClient({
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
-    <ApolloProvider client={client}></ApolloProvider>
-  </React.StrictMode>
+  <StrictMode>
+    <GlobalStyle />
+    <ApolloProvider client={client}>
+      <App />
+    </ApolloProvider>
+  </StrictMode>
 );
