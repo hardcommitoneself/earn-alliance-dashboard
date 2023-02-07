@@ -31,14 +31,14 @@ export const BorderLeftOverlay = styled.div`
   position: absolute;
   width: 33.3333%;
   height: 100%;
-  background-image: linear-gradient(to right, black, transparent);
+  background-image: linear-gradient(to right, #333333, transparent);
 `;
 
 export const BorderRightOverlay = styled.div`
   position: absolute;
   width: 33.3333%;
   height: 100%;
-  background-image: linear-gradient(to left, black, transparent);
+  background-image: linear-gradient(to left, #333333, transparent);
   right: 0;
 `;
 
@@ -120,16 +120,29 @@ export const ProfileDetailContainer = styled.div`
 
 export const ProfileAvatarContainer = styled.div`
   position: relative;
-  overflow: hidden;
   transform: rotate(-45deg);
-  width: 44px;
-  height: 44px;
+  width: 62px;
+  height: 62px;
+`;
+
+export const ProfileLevel = styled.div`
+  position: absolute;
+  right: 30%;
+  bottom: -5%;
+  width: 20px;
+  height: 20px;
+  background-color: ${(props) => props.theme.colors.secondary};
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(45deg);
 `;
 
 export const ProfileAvatar = styled.img`
   transform: rotate(45deg);
-  width: 44px;
-  height: 44px;
+  width: 62px;
+  height: 62px;
 `;
 
 export const ProfileNamePowerContainer = styled.div`

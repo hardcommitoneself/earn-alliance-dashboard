@@ -20,14 +20,14 @@ export const BorderLeftOverlay = styled.div`
   position: absolute;
   width: 33.3333%;
   height: 100%;
-  background-image: linear-gradient(to right, black, transparent);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.3), transparent);
 `;
 
 export const BorderRightOverlay = styled.div`
   position: absolute;
   width: 33.3333%;
   height: 100%;
-  background-image: linear-gradient(to left, black, transparent);
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.3), transparent);
   right: 0;
 `;
 

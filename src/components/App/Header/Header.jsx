@@ -79,6 +79,7 @@ const Header = () => {
           <EA.ProfileDetailContainer>
             <EA.ProfileAvatarContainer>
               <EA.ProfileAvatar src={`/avatars/${user.avatar}`} />
+              <EA.ProfileLevel>{user.level}</EA.ProfileLevel>
             </EA.ProfileAvatarContainer>
 
             <EA.ProfileNamePowerContainer>
