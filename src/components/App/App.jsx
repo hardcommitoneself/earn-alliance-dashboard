@@ -4,6 +4,7 @@ import React from "react";
 import Header from "components/App/Header";
 import Footer from "components/App/Footer";
 import Content from "components/App/Content";
+import Games from "components/Games";
 import Filter from "components/Filter";
 
 import * as EA from "./styles";
@@ -18,6 +19,8 @@ const App = () => {
           <EA.ContentTitle>Game Directory</EA.ContentTitle>
           <Filter />
         </EA.ContentHeader>
+
+        <Games />
       </Content>
 
       <Footer />
