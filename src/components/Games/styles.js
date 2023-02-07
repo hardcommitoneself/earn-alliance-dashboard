@@ -16,3 +16,9 @@ export const GamesPaginationContainer = styled.div`
   display: flex;
   justify-content: flex-end;
 `;
+
+export const GamesEmpty = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;

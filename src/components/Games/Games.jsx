@@ -3,11 +3,13 @@ import { useGames } from "context/games";
 
 // components
 import Pagination from "common/Pagination";
+import Loader from "components/Loader";
+import Game from "./Game";
 
 import * as EA from "./styles";
 
 const Games = () => {
-  const { filteredGames } = useGames();
+  const { filteredGames, isLoading } = useGames();
   const [current, setCurrent] = useState(0);
 
   const paginate = (page) => {
@@ -16,7 +18,17 @@ const Games = () => {
 
   return (
     <EA.GamesContainer>
-      <EA.GamesMain></EA.GamesMain>
+      {isLoading ? (
+        <Loader />
+      ) : !filteredGames.length ? (
+        <EA.GamesEmpty>Not found</EA.GamesEmpty>
+      ) : (
+        <EA.GamesMain>
+          {filteredGames.slice(current * 12, (current + 1) * 12).map((game) => (
+            <Game key={game.id} {...game} />
+          ))}
+        </EA.GamesMain>
+      )}
 
       <EA.GamesPaginationContainer>
         <Pagination
