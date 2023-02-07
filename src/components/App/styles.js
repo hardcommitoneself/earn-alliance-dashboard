@@ -12,8 +12,14 @@ export const Container = styled.div`
     url("images/bg.png"), url("images/bg.png");
 `;
 
-export const ContentWrapper = styled.div`
-  flex-grow: 1;
-  color: white;
-  background-color: ${(props) => props.theme.colors.primary90};
+export const ContentHeader = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+`;
+
+export const ContentTitle = styled.span`
+  font-size: 48px;
+  line-height: 1;
+  font-weight: 700;
 `;

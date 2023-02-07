@@ -48,8 +48,8 @@ const user = {
 
 const Header = () => {
   return (
-    <EA.Container>
-      <EA.InnerContainer>
+    <EA.Header>
+      <EA.HeaderInner>
         {/* logo */}
         <EA.Logo href="http://localhost:3000">
           <EA.LogoImage src="images/logo.svg" alt="logo" />
@@ -89,14 +89,14 @@ const Header = () => {
 
           <EA.Dropdown src="/images/arrow-down.png" alt="arrow-down" />
         </EA.ProfileContainer>
-      </EA.InnerContainer>
+      </EA.HeaderInner>
 
       {/* border */}
       <EA.Border>
         <EA.BorderLeftOverlay />
         <EA.BorderRightOverlay />
       </EA.Border>
-    </EA.Container>
+    </EA.Header>
   );
 };
 
