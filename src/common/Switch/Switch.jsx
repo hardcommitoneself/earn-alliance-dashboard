@@ -2,11 +2,11 @@ import React, { useCallback } from "react";
 import * as EA from "./styles";
 
 const Swtich = (props) => {
-  const { label = "", checked = false, toggle = undefined } = props;
+  const { label = "", checked = false, onCheck = undefined } = props;
 
   const handleClick = useCallback(() => {
-    if (typeof toggle === "function") toggle(!checked);
-  }, [toggle, checked]);
+    if (typeof onCheck === "function") onCheck(!checked);
+  }, [onCheck, checked]);
 
   return (
     <EA.Switch>

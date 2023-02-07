@@ -7,9 +7,14 @@ import {
   createHttpLink,
 } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
+
+/* Theme */
 import { ThemeProvider } from "styled-components";
 import GlobalStyle from "common/style/global-style";
 import { theme } from "common/style/theme";
+
+/* Context Provider */
+import { GamesProvider } from "context/games";
 
 import App from "components/App";
 
@@ -37,7 +42,9 @@ root.render(
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <ApolloProvider client={client}>
-        <App />
+        <GamesProvider>
+          <App />
+        </GamesProvider>
       </ApolloProvider>
     </ThemeProvider>
   </StrictMode>
